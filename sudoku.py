@@ -17,7 +17,7 @@ def printBoard(board):
             print("----------------------")
         for j in range(len(board[0])):
             if j % 3 == 0 and j != 0:
-                print("| ",end="")
+            	print("| ", end="")
             if j == 8:
                 print(board[i][j])
             else:
@@ -68,11 +68,14 @@ def solver(board):
             board[loc[0]][loc[1]] = 0
     return False
 
-def changer(board):
+def main():
 
-    board[4][4] = 9
+	printBoard(bo)
+	solver(bo)
+	print('\n')
+	print('Solved Sudoku Board:')
+	print('\n')
+	printBoard(bo)
 
-printBoard(bo)
-solver(bo)
-print('\n')
-printBoard(bo)
+
+main()
